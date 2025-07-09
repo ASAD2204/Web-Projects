@@ -1,0 +1,117 @@
+body {
+    background: linear-gradient(135deg, #1F1C2C, #928DAB); 
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #FFFFFF; 
+}
+
+.box {
+    background-color: #FFFFFF; 
+    width: 40%;
+    margin: 5% auto;
+    border: 3px solid #6C63FF; 
+    border-top-left-radius: 30px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 30px;
+    padding: 10px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); 
+}
+
+h1 {
+    border: 3px solid #6C63FF;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 10px;
+    padding: 10px;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: #1F1C2C; 
+}
+
+#n1, #n2 {
+    height: 40px;
+    width: 70%;
+    margin: 10px auto;
+    border-radius: 7px;
+    border: 2px solid #6C63FF;
+    font-size: 1rem;
+    color: #1F1C2C;
+    background-color: #F5F5F5; 
+    border-top-left-radius: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 10px;
+}
+
+button {
+    margin: 10px;
+    margin-top: 20px;
+    width: 20%;
+    padding: 7px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 10px;
+    font-size: 1rem;
+    max-width: 200px;
+    min-width: 80px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    background-color: #6C63FF; 
+    color: #FFFFFF; 
+    border: none;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #5848C2; 
+}
+
+#output {
+    padding: 10px;
+    margin: 20px auto;
+    text-align: center;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    border: 3px solid #6C63FF;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 10px;
+    max-width: 70%;
+    color: #1F1C2C; 
+    background-color: #F5F5F5; 
+}
+
+p {
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #1F1C2C; 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .box {
+        width: 90%;
+    }
+
+    button {
+        width: 40%;
+    }
+
+    #n1, #n2 {
+        width: 90%;
+    }
+
+    #output {
+        width: 90%;
+    }
+}
