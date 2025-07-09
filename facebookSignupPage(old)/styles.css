@@ -1,0 +1,118 @@
+.header_grid-container{
+display: grid;
+grid-template-columns: 60% 40%;
+justify-content: space-between;   background-color: #365899;
+    color: white;
+    width: 100%;
+    margin-top:0px;
+    margin-right:0px;
+    margin-left:0px;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f2f5;
+}
+
+.main_grid-container{
+display: grid;
+grid-template-columns: 60% 40%;
+}
+.gridcontainer{
+    justify-content: space-between;
+display: grid;
+grid-template-columns: 30% 30% 20% 10%;
+}
+#email-password,#password{
+    width:100%;
+    margin: 5px;
+    border-color:#365899;border-radius: 3px;
+}
+.head{
+    padding: 10px;
+}
+#d1,#d2{
+
+    font-size: smaller;
+    margin-top: 20px;
+
+}
+#d3{
+    
+    
+    justify-content: left;
+    margin-top: 40px;
+}
+   #d4{
+    font-size: small;
+    margin: 2px;
+    padding: 2px;
+   }
+  
+.name{
+    border-color: #f4f4f4;
+width: 30%;
+margin:8px;
+padding:6px;
+border-radius: 3px; 
+border-style: groove;
+
+}
+#p1{
+    font-size: large;
+    color:grey;
+}
+.email{
+    border-color: #f4f4f4;
+    width: 67%;
+    margin:8px;
+    padding:6px;
+    border-radius: 3px; 
+    border-style: groove;
+}
+.password{
+    border-color: #f4f4f4;
+    width: 67%;
+    margin:8px;
+    padding:6px;
+    border-radius: 3px; 
+    border-style: groove;
+}
+
+
+h1{
+    text-align: center;
+}
+img{
+    height:600px;
+    
+    width: 100%;
+}
+
+.last{
+    width: 80%;
+   justify-content: start;
+   font-size: medium;
+}
+input[type="radio"]{
+    margin: 20px;
+}
+#bt1{
+    background-color:#365899;
+    border-style: solid;
+    margin-right: 20px;
+border-radius: 4px;
+cursor: pointer;
+
+} 
+#bt2{ background-color: #4CAF50;
+    color: white;
+    padding: 12px 40px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    width: 200px;
+    font-size: medium;
+   
+    margin-bottom: 15px;}
