@@ -1,0 +1,106 @@
+body {
+  margin-top: 115px;
+  margin-left: 52px;
+  transition: all 0.5s ease;
+  text-align: center;
+}
+
+.dark-mode {
+  background-color: #1f2937;
+  color: white;
+}
+
+.light-mode {
+  background-color: #ffffff;
+  color: black;
+}
+
+h1 {
+  text-align: center;
+  color: #55f991;
+  margin-bottom: 100px;
+}
+
+h2 {
+  color: white;
+  font-weight: bolder;
+}
+
+.light-mode h2 {
+  color: black;
+}
+
+span {
+  color: #55f991;
+}
+
+p {
+  color: #d5d4d8;
+}
+
+.light-mode p,
+.light-mode label {
+  color: #333;
+}
+
+.passwordbox {
+  background-color: #273549;
+  width: 211px;
+  height: 39px;
+  border-radius: 6px;
+  color: #55f991;
+  margin: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  background-color: #10b981;
+  color: white;
+  width: 191px;
+  height: 42px;
+  border-radius: 6px;
+  border: none;
+  margin: 20px 10px 20px 0;
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: 0 0 30px 5px #55f991;
+  transform: scale(1.05);
+  transition: all 300ms;
+}
+
+hr {
+  width: 446px;
+  border: 1px solid #2f3e53;
+}
+
+#passContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.label-div {
+  display: grid;
+  grid-template-columns: 200px 200px;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  color: #d5d4d8;
+}
+
+select {
+  background-color: #273549;
+  color: #55f991;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  padding: 5px;
+}

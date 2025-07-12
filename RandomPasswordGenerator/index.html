@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body class="dark-mode">
+  <h1>Password Generator</h1>
+  <h2>Generate a <br><span>random Password</span></h2>
+  <p>Never use an insecure password again.</p>
+
+  <hr />
+  <div>
+    <div class="label-div">
+      <label for="Length">Select <span>Password Length</span></label>
+      <select name="Length" id="length-sel">
+        <option value="15" selected>15-Characters</option>
+        <option value="20">20-Characters</option>
+        <option value="25">25-Characters</option>
+      </select>
+    </div>
+    <div class="label-div">
+      <label for="Type">Select <span>Password Type</span></label>
+      <select name="Type" id="type-sel">
+        <option value="alphanumeric" selected>Alphanumeric</option>
+        <option value="alphabet">Alphabets only</option>
+        <option value="digit">Digits only</option>
+        <option value="all">All Characters</option>
+      </select>
+    </div>
+    <button onclick="GeneratePassword()">Generate Passwords</button>
+    <button onclick="toggleTheme()">Toggle Light/Dark Mode</button>
+  </div>
+  <hr />
+
+  <div id="passContainer">
+    <div class="passwordbox" id="pbox-1"></div>
+    <button onclick="copyPassword('pbox-1')">Copy</button>
+    <div class="passwordbox" id="pbox-2"></div>
+    <button onclick="copyPassword('pbox-2')">Copy</button>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
