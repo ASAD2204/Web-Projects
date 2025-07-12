@@ -1,0 +1,95 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    max-width:375px;
+    background-color:#EDEDED;
+    font-family: "Source Sans 3", sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+}
+header{
+width: 375px;
+border-bottom-width: 1px;
+background-color: #fff;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+}
+.img1{
+width: 127px;
+height: 34px;
+}
+.img2{
+width: 34px;
+height: 34px;
+ border-radius: 80%; 
+}
+section{
+    margin-top: 2px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    width: 375px;
+        
+}
+
+.user-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:left;
+    padding-left: 10px;
+    
+}
+.user-info p{
+   
+font-weight: 400;
+font-style: Regular;
+font-size: 12px;
+padding-left: 10px;
+
+}
+
+.user-info .name{
+    font-weight: 900;
+    
+}
+.post-image{
+    width: 375px;
+height: 375px;
+}
+.post-body{
+width: 346px;
+height: 78px;
+top: 451px;
+left: 10px;
+padding: 10px;
+}
+.icons{
+   
+width: 105px;
+height: 22px;
+margin-bottom: 5px;
+
+}
+.icons img{
+    width: 18px;
+    height: 18px;
+}
+.icons img:hover{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.spacing{
+    margin-bottom: 5px;
+    
+}
+.username{
+    font-weight: 700;
+    padding-right:6px;
+}
+.likeCounts{
+    font-weight: 700;
+}
