@@ -1,0 +1,38 @@
+body {
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+ 
+}
+
+.title {
+    font-weight: lighter;
+}
+
+.main-img {
+    width: 300px;
+    box-shadow: 0px 2px 5px lightgray;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+.metadata{
+    margin-left: 30px;
+}
+img{
+    padding-right: 20px;
+}
+a{
+    color:#007185;
+}
+.main-head{
+    color:#565959;
+}
+p{
+    font-size: large;
+    font-weight: normal;
+}
+
+
+
