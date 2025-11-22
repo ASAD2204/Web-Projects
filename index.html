@@ -3,106 +3,329 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Web Projects — ASAD2204</title>
-  <link rel="stylesheet" href="/style.css" />
+  <title>Web Projects Portfolio — ASAD2204</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="site-header">
+  <!-- Animated Background -->
+  <div class="bg-animation">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+  </div>
+
+  <!-- Hero Section -->
+  <header class="hero">
     <div class="container">
-      <h1>ASAD2204 — Web Projects</h1>
-      <p class="subtitle">A showcase of small web projects — click any card to open the live demo (GitHub Pages).</p>
-      <div class="actions">
-        <input id="search" placeholder="Search projects..." />
+      <div class="hero-content">
+        <div class="hero-badge">✨ Web Development Portfolio</div>
+        <h1 class="hero-title">
+          <span class="gradient-text">ASAD2204</span><br/>
+          Web Projects Showcase
+        </h1>
+        <p class="hero-subtitle">
+          A curated collection of interactive web applications and creative projects.<br/>
+          Click any project card to explore the live demo.
+        </p>
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-number" id="project-count">17</div>
+            <div class="stat-label">Projects</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Open Source</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">∞</div>
+            <div class="stat-label">Creativity</div>
+          </div>
+        </div>
       </div>
     </div>
   </header>
 
+  <!-- Search Section -->
+  <section class="search-section">
+    <div class="container">
+      <div class="search-wrapper">
+        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.35-4.35"></path>
+        </svg>
+        <input id="search" type="text" placeholder="Search projects by name..." />
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Grid -->
   <main class="container">
-    <section id="projects" class="grid"></section>
+    <section id="projects" class="projects-grid"></section>
   </main>
 
-  <footer class="container footer">
-    <p>Deployed on GitHub Pages — <a href="https://asad2204.github.io/Web-Projects/">Live site</a></p>
-    <p>Repository: <a href="https://github.com/ASAD2204/Web-Projects">ASAD2204/Web-Projects</a></p>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>ASAD2204</h3>
+          <p>Building creative web experiences</p>
+        </div>
+        <div class="footer-section">
+          <h4>Links</h4>
+          <a href="https://github.com/ASAD2204/Web-Projects" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+            GitHub Repository
+          </a>
+          <a href="https://asad2204.github.io/Web-Projects/" target="_blank" rel="noopener noreferrer">
+            🌐 Live Portfolio
+          </a>
+        </div>
+        <div class="footer-section">
+          <h4>Tech Stack</h4>
+          <div class="tech-tags">
+            <span class="tech-tag">HTML5</span>
+            <span class="tech-tag">CSS3</span>
+            <span class="tech-tag">JavaScript</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 ASAD2204 • Deployed on GitHub Pages</p>
+      </div>
+    </div>
   </footer>
 
   <script>
-    // List of project folders in the repository. Update this array when adding/removing projects.
-    const projects = [
-      "AnnoyingCookieConset",
-      "Basic Caculator",
-      "BasketBallScoreCounter",
-      "BirthdayGiftSite",
-      "BlackJackGame",
-      "BookArticle",
-      "Co-workingSpaceSite",
-      "CountryVisit",
-      "DailyDribble",
-      "FacebookSignupPage",
-      "LeadTracker_Browser",
-      "Matric_Imperial _UnitConvertor",
-      "NFT Website",
-      "Oldagram-InstagramLike",
-      "PassengerCounter",
-      "RandomPasswordGenerator",
-      "facebookSignupPage(old)"
+    // Project data with icons and descriptions
+    const projectsData = [
+      {
+        name: "AnnoyingCookieConset",
+        icon: "🍪",
+        description: "Cookie consent popup implementation",
+        category: "UI Component"
+      },
+      {
+        name: "Basic Caculator",
+        icon: "🔢",
+        description: "Simple calculator with basic operations",
+        category: "Utility"
+      },
+      {
+        name: "BasketBallScoreCounter",
+        icon: "🏀",
+        description: "Interactive basketball score tracker",
+        category: "Game"
+      },
+      {
+        name: "BirthdayGiftSite",
+        icon: "🎁",
+        description: "Birthday gift landing page",
+        category: "Landing Page"
+      },
+      {
+        name: "BlackJackGame",
+        icon: "🃏",
+        description: "Classic BlackJack card game",
+        category: "Game"
+      },
+      {
+        name: "BookArticle",
+        icon: "📚",
+        description: "Book article showcase page",
+        category: "Content"
+      },
+      {
+        name: "Co-workingSpaceSite",
+        icon: "💼",
+        description: "Co-working space website",
+        category: "Landing Page"
+      },
+      {
+        name: "CountryVisit",
+        icon: "🌍",
+        description: "Country visit tracker",
+        category: "Utility"
+      },
+      {
+        name: "DailyDribble",
+        icon: "🎨",
+        description: "Design showcase page",
+        category: "Portfolio"
+      },
+      {
+        name: "FacebookSignupPage",
+        icon: "📱",
+        description: "Facebook signup page clone",
+        category: "Clone"
+      },
+      {
+        name: "LeadTracker_Browser",
+        icon: "🔖",
+        description: "Browser extension for lead tracking",
+        category: "Extension"
+      },
+      {
+        name: "Matric_Imperial _UnitConvertor",
+        icon: "📏",
+        description: "Metric to Imperial unit converter",
+        category: "Utility"
+      },
+      {
+        name: "NFT Website",
+        icon: "🖼️",
+        description: "NFT showcase website",
+        category: "Landing Page"
+      },
+      {
+        name: "Oldagram-InstagramLike",
+        icon: "📸",
+        description: "Instagram-like photo feed",
+        category: "Clone"
+      },
+      {
+        name: "PassengerCounter",
+        icon: "👥",
+        description: "Passenger counting application",
+        category: "Utility"
+      },
+      {
+        name: "RandomPasswordGenerator",
+        icon: "🔐",
+        description: "Secure password generator",
+        category: "Security"
+      },
+      {
+        name: "facebookSignupPage(old)",
+        icon: "📱",
+        description: "Facebook signup (legacy version)",
+        category: "Clone"
+      }
     ];
 
     const basePagesUrl = 'https://asad2204.github.io/Web-Projects/';
 
-    function makeCard(name) {
+    function makeCard(project) {
       const card = document.createElement('article');
-      card.className = 'card';
+      card.className = 'project-card';
+
+      // Create clickable link wrapper
+      const cardLink = document.createElement('a');
+      cardLink.href = basePagesUrl + encodeURIComponent(project.name);
+      cardLink.className = 'card-link';
+      cardLink.target = '_blank';
+      cardLink.rel = 'noopener noreferrer';
+
+      const iconWrapper = document.createElement('div');
+      iconWrapper.className = 'project-icon';
+      iconWrapper.textContent = project.icon;
+
+      const content = document.createElement('div');
+      content.className = 'project-content';
+
+      const category = document.createElement('span');
+      category.className = 'project-category';
+      category.textContent = project.category;
 
       const title = document.createElement('h3');
-      title.textContent = name;
+      title.className = 'project-title';
+      title.textContent = project.name;
 
-      // Demo link (GitHub Pages). Use encodeURIComponent to handle spaces and special characters.
-      const demoUrl = basePagesUrl + encodeURIComponent(name);
-      const demoLink = document.createElement('a');
-      demoLink.href = demoUrl;
-      demoLink.target = '_blank';
-      demoLink.rel = 'noopener noreferrer';
-      demoLink.className = 'btn';
-      demoLink.textContent = 'Open demo';
+      const description = document.createElement('p');
+      description.className = 'project-description';
+      description.textContent = project.description;
 
-      // Repo link
-      const repoUrl = 'https://github.com/ASAD2204/Web-Projects/tree/main/' + encodeURIComponent(name);
+      const footer = document.createElement('div');
+      footer.className = 'project-footer';
+
+      const viewBtn = document.createElement('span');
+      viewBtn.className = 'view-project';
+      viewBtn.innerHTML = 'View Project <span class="arrow">→</span>';
+
       const repoLink = document.createElement('a');
-      repoLink.href = repoUrl;
+      repoLink.href = 'https://github.com/ASAD2204/Web-Projects/tree/main/' + encodeURIComponent(project.name);
       repoLink.target = '_blank';
       repoLink.rel = 'noopener noreferrer';
-      repoLink.className = 'muted';
-      repoLink.textContent = 'Repo folder';
+      repoLink.className = 'repo-link';
+      repoLink.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>';
+      repoLink.onclick = (e) => e.stopPropagation();
 
-      const controls = document.createElement('div');
-      controls.className = 'card-controls';
-      controls.appendChild(demoLink);
-      controls.appendChild(repoLink);
+      footer.appendChild(viewBtn);
+      footer.appendChild(repoLink);
 
-      card.appendChild(title);
-      card.appendChild(controls);
+      content.appendChild(category);
+      content.appendChild(title);
+      content.appendChild(description);
+
+      cardLink.appendChild(iconWrapper);
+      cardLink.appendChild(content);
+      cardLink.appendChild(footer);
+
+      card.appendChild(cardLink);
       return card;
     }
 
     function render(list) {
       const container = document.getElementById('projects');
       container.innerHTML = '';
+      
       if (list.length === 0) {
-        container.innerHTML = '<p>No projects found.</p>';
+        container.innerHTML = '<div class="no-results"><p>🔍 No projects found matching your search.</p></div>';
         return;
       }
-      list.forEach(name => container.appendChild(makeCard(name)));
+      
+      list.forEach(project => {
+        const card = makeCard(project);
+        container.appendChild(card);
+        // Trigger animation
+        setTimeout(() => card.classList.add('visible'), 50);
+      });
     }
 
     // Initial render
-    render(projects);
+    render(projectsData);
 
-    // Simple search
+    // Update project count
+    document.getElementById('project-count').textContent = projectsData.length;
+
+    // Search functionality
     document.getElementById('search').addEventListener('input', (e) => {
-      const q = e.target.value.toLowerCase().trim();
-      if (!q) return render(projects);
-      render(projects.filter(p => p.toLowerCase().includes(q)));
+      const query = e.target.value.toLowerCase().trim();
+      if (!query) {
+        render(projectsData);
+        return;
+      }
+      
+      const filtered = projectsData.filter(project => 
+        project.name.toLowerCase().includes(query) ||
+        project.description.toLowerCase().includes(query) ||
+        project.category.toLowerCase().includes(query)
+      );
+      
+      render(filtered);
+    });
+
+    // Add scroll animation
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.project-card').forEach(card => {
+      observer.observe(card);
     });
   </script>
 </body>
