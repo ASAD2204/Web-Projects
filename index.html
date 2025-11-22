@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Web Projects — ASAD2204</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>ASAD2204 — Web Projects</h1>
+      <p class="subtitle">A showcase of small web projects — click any card to open the live demo (GitHub Pages).</p>
+      <div class="actions">
+        <input id="search" placeholder="Search projects..." />
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="projects" class="grid"></section>
+  </main>
+
+  <footer class="container footer">
+    <p>Deployed on GitHub Pages — <a href="https://asad2204.github.io/Web-Projects/">Live site</a></p>
+    <p>Repository: <a href="https://github.com/ASAD2204/Web-Projects">ASAD2204/Web-Projects</a></p>
+  </footer>
+
+  <script>
+    // List of project folders in the repository. Update this array when adding/removing projects.
+    const projects = [
+      "AnnoyingCookieConset",
+      "Basic Caculator",
+      "BasketBallScoreCounter",
+      "BirthdayGiftSite",
+      "BlackJackGame",
+      "BookArticle",
+      "Co-workingSpaceSite",
+      "CountryVisit",
+      "DailyDribble",
+      "FacebookSignupPage",
+      "LeadTracker_Browser",
+      "Matric_Imperial _UnitConvertor",
+      "NFT Website",
+      "Oldagram-InstagramLike",
+      "PassengerCounter",
+      "RandomPasswordGenerator",
+      "facebookSignupPage(old)"
+    ];
+
+    const basePagesUrl = 'https://asad2204.github.io/Web-Projects/';
+
+    function makeCard(name) {
+      const card = document.createElement('article');
+      card.className = 'card';
+
+      const title = document.createElement('h3');
+      title.textContent = name;
+
+      // Demo link (GitHub Pages). Use encodeURIComponent to handle spaces and special characters.
+      const demoUrl = basePagesUrl + encodeURIComponent(name);
+      const demoLink = document.createElement('a');
+      demoLink.href = demoUrl;
+      demoLink.target = '_blank';
+      demoLink.rel = 'noopener noreferrer';
+      demoLink.className = 'btn';
+      demoLink.textContent = 'Open demo';
+
+      // Repo link
+      const repoUrl = 'https://github.com/ASAD2204/Web-Projects/tree/main/' + encodeURIComponent(name);
+      const repoLink = document.createElement('a');
+      repoLink.href = repoUrl;
+      repoLink.target = '_blank';
+      repoLink.rel = 'noopener noreferrer';
+      repoLink.className = 'muted';
+      repoLink.textContent = 'Repo folder';
+
+      const controls = document.createElement('div');
+      controls.className = 'card-controls';
+      controls.appendChild(demoLink);
+      controls.appendChild(repoLink);
+
+      card.appendChild(title);
+      card.appendChild(controls);
+      return card;
+    }
+
+    function render(list) {
+      const container = document.getElementById('projects');
+      container.innerHTML = '';
+      if (list.length === 0) {
+        container.innerHTML = '<p>No projects found.</p>';
+        return;
+      }
+      list.forEach(name => container.appendChild(makeCard(name)));
+    }
+
+    // Initial render
+    render(projects);
+
+    // Simple search
+    document.getElementById('search').addEventListener('input', (e) => {
+      const q = e.target.value.toLowerCase().trim();
+      if (!q) return render(projects);
+      render(projects.filter(p => p.toLowerCase().includes(q)));
+    });
+  </script>
+</body>
+</html>
